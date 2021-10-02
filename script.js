@@ -1,11 +1,9 @@
 function carregar() {
 var msg = document.getElementById("msg")
 var img = document.getElementById("imagem")
-var heading = document.getElementsByTagName("h1")
 var data = new Date()
-var hora = data.getHours()
-var minuto = data.getMinutes()
-msg.innerHTML = `It's currently ${hora}:${minuto}.`
+var hora = data.getHours() + ':' + data.getMinutes()
+msg.innerHTML = `It's currently ${hora}.`
 if (hora >= 0 && hora < 12) {
     // BOM DIA!
     img.src = 'imagens/manha.png'
