@@ -10,7 +10,7 @@ if (hora >= 0 && hora < 12) {
     document.body.style.backgroundColor = '#d8be88'
 
 }
-else if (hora >= 12 && hora <= 18) {
+else if (hora => 12 && hora <= 18) {
     // BOA TARDE!
     img.src = 'imagens/tarde.png'
     document.body.style.backgroundColor = '#e9a76d'
