@@ -1,17 +1,21 @@
 function carregar() {
     var msg = document.getElementById("msg")
     var img = document.getElementById("imagem")
-    var data = new Date()
-    var time = data.getHours()
-    var clock = time + ':' + data.getMinutes()
+    var date = new Date()
+    var hour = date.getHours()
+    var minute = date.getMinutes()
+    if (minute < 10) {
+        minute = '0' + minute
+    }
+    var clock = hour + ':' + minute
     msg.innerHTML = `It's currently ${clock}.`
-    if (time >= 0 && time < 12) {
+    if (hour >= 0 && hour < 12) {
         // GOOD MORNING!
         img.src = 'imagens/manha.png'
         document.body.style.backgroundColor = '#d8be88'
     
     }
-    else if (time => 12 && time <= 18) {
+    else if (hour => 12 && hour <= 18) {
         // GOOD AFTERNOON!
         img.src = 'imagens/tarde.png'
         document.body.style.backgroundColor = '#e9a76d'
